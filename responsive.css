@@ -1,0 +1,182 @@
+/* ===========================
+     RESPONSIVE 1200px
+=========================== */
+@media (max-width: 1200px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .info-item {
+    flex: 0 0 30%;
+    justify-content: center;
+  }
+
+  .cart {
+    margin-top: 10px;
+  }
+}
+
+/* ===========================
+     RESPONSIVE 992px (tablet)
+=========================== */
+@media (max-width: 992px) {
+  /* Topbar */
+  .tieu-de {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Header */
+  .header {
+    flex-direction: column;
+  }
+
+  .info-item {
+    flex: 0 0 45%;
+  }
+
+  /* Navbar */
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  /* Banner */
+  .banner-image img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  /* Product */
+  .product-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-wrap: wrap;
+  }
+}
+
+/* ===========================
+     RESPONSIVE 768px (mobile lớn)
+=========================== */
+@media (max-width: 768px) {
+
+  /* Search */
+  .search-bar {
+    justify-content: center;
+  }
+
+  /* Navbar */
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .navbar li {
+    text-align: center;
+
+  }
+
+  /* Product */
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 sản phẩm 1 hàng */
+  }
+
+  .product-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Category header */
+  .category-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .category-tabs {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .view-all {
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .payment-methods {
+    justify-content: center;
+  }
+
+  .social-icons img {
+    margin-right: 0;
+  }
+}
+
+/* ===========================
+     RESPONSIVE 576px (mobile nhỏ)
+=========================== */
+@media (max-width: 576px) {
+
+  /* Header */
+  .logo img {
+    width: 60px;
+  }
+
+  .logo h2 {
+    font-size: 16px;
+  }
+
+  .info-item {
+    flex-direction: column;
+    font-size: 12px;
+  }
+
+  /* Products */
+  .product-list {
+    grid-template-columns: 1fr; /* 1 sản phẩm 1 hàng */
+  }
+
+  .product-card {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  /* Banner text */
+  .banner-label {
+    font-size: 16px;
+    padding: 10px 20px;
+    min-width: auto;
+  }
+
+  /* Footer */
+  .footer-col {
+    text-align: left;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .payment-methods {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* ===========================
+     Ngăn tràn ngang
+=========================== */
+body, html {
+  overflow-x: hidden;
+}

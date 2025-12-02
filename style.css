@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 25px;
+  padding: auto;
   font-size: 14px;
   flex-wrap: wrap;
 }
@@ -86,7 +86,7 @@ body {
   margin: 0;
 }
 .logo .slogan p {
-  color: #6b7b5f;
+  color: #2AC041;
   font-size: 13px;
   margin: 0;
 }
@@ -163,6 +163,8 @@ body {
   display: flex;
   justify-content: center;
   gap: 40px;
+  margin-bottom: 0;
+   padding-left: 30px;
 }
 .navbar a {
   text-decoration: none;
@@ -223,12 +225,14 @@ body {
 
 /* ======================= 7. KHỐI DANH MỤC (CATEGORY BOX) ======================= */
 .category {
-  width: 96%;
+  width: 100%;
+   max-width: 100%;
   margin: 25px auto;
   background: #ffffff;
   border-radius: 12px;
-  padding: 20px;
+  padding:0;
   box-shadow: 0 0 6px rgba(0,0,0,0.05);
+   box-sizing: border-box;
 }
 
 /* Phần header của mỗi danh mục (Rau củ sạch / Hoa quả / Quà tặng...) */
@@ -274,11 +278,10 @@ body {
 /* ======================= 8. LƯỚI SẢN PHẨM (GRID) ======================= */
 .product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
   margin-top: 18px;
 }
-
 
 /* ======================= 9. THẺ SẢN PHẨM (PRODUCT CARD) ======================= */
 .product-card {
@@ -406,39 +409,32 @@ body {
 
 
 /* ===== HÀNG BANNER ===== */
+/* ===== HÀNG BANNER ===== */
 .banner-row {
-    width: 96%;
-    margin: auto;
+    width: 100%;
+    max-width: 1200px;          /* khung tối đa cho 2 banner */
+    margin: 0 auto 40px;        /* căn giữa + cách dưới 40px */
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;            /* cho phép xuống hàng khi chật */
 }
 
 .banner-item {
-    flex: 1;
+    flex: 1 1 0;                /* chia đều, cho phép co giãn */
     position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
+/* Ảnh giữ tỉ lệ, không méo khi zoom */
 .banner-item img {
     width: 100%;
-    border-radius: 18px;
+    height: auto;               /* bỏ chiều cao cố định */
+    aspect-ratio: 16 / 5;       /* tỉ lệ ngang:cao – có thể đổi 16/6 nếu muốn cao hơn */
+    object-fit: cover;
     display: block;
 }
 
-/* Nhãn trong banner */
-.banner-label {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(110, 154, 70, 0.9);
-    padding: 15px 45px;
-    color: #fff;
-    border-radius: 35px;
-    font-size: 22px;
-    font-weight: 700;
-     min-width: 500px;  
-    text-align: center;
-}
 .home-extra {
     width: 96%;
     margin: 40px auto 60px;
@@ -448,9 +444,9 @@ body {
 
 /* ===== LOGO BÁO CHÍ ===== */
 .media-logos {
-    width: 90%;
+    width: 100%;
     margin: 0 auto 50px;
-    padding: 25px 10px;
+    padding: auto;
     background: #f4f4f4;
     border-radius: 15px;
 
@@ -470,104 +466,168 @@ body {
 }
 /* ========== FOOTER ========== */
 .footer {
+    width: 100%;
     background: #eaeaea;
     padding: 40px 20px 0;
     margin-top: 50px;
     border-top: 1px solid #ccc;
 }
 
+
+/* Khung chứa 4 cột footer */
 .footer-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
+  max-width: 100%;         
+  margin: 0 auto;            /* căn giữa */
+  padding: 40px 40px 0;      /* trên 40px, hai bên 40px */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: 50px;
 }
 
 /* Mỗi cột */
 .footer-col {
-    flex: 1;
-    min-width: 220px;
+  min-width: 10px;
 }
 
+/* Tiêu đề cột */
 .footer-col h3 {
-    color: #4a7c1a;
-    margin-bottom: 15px;
-    font-size: 20px;
+  color: #4a7c1a;
+  margin-bottom: 15px;
+  font-size: 20px;
 }
 
-/* Logo */
+/* Logo + chữ Giới thiệu sát nhau */
+.footer-about-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
 .footer-logo {
-    width: 80px;
-    margin-bottom: 10px;
+  width: 80px;
 }
 
+.footer-about-header h3 {
+  margin: 0;
+}
+
+/* Text trong footer */
 .footer-col p {
-    margin: 5px 0;
-    color: #444;
+  margin: 5px 0;
+  color: #444;
 }
 
 .footer-col i {
-    color: #4a7c1a;
-    margin-right: 5px;
+  color: #4a7c1a;
+  margin-right: 5px;
 }
 
 .footer-col .highlight {
-    color: #2b8f4a;
-    font-weight: bold;
+  color: #2b8f4a;
+  font-weight: bold;
 }
 
-/* Icon đã thông báo */
+/* Ảnh đã thông báo */
 .notify-img {
-    width: 180px;
-    margin-top: 10px;
+  width: 180px;
+  margin-top: 10px;
 }
 
-/* Danh sách */
+/* Danh sách link */
 .footer-col ul {
-    list-style: none;
+    list-style: none;  /* bỏ chấm tròn */
+    margin: 0;
     padding: 0;
 }
 
 .footer-col ul li {
-    padding: 5px 0;
-    color: #444;
+  padding: 5px 0;
+  color: #444;
+   white-space: nowrap;
 }
 
 /* Mạng xã hội */
 .social-icons img {
-    width: 36px;
-    height: 36px;
-    margin-right: 12px;
-    border-radius: 8px; /* nếu muốn bo góc */
-    object-fit: cover;
-    transition: 0.3s;
-    cursor: pointer;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 18px;
+  margin-right: 12px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .social-icons img:hover {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
+.payment-methods {
+  display: flex;
+  align-items: center;
+  gap: 15px;           /* khoảng cách giữa các logo */
+  margin-top: 8px;     /* cách chữ "Hình Thức Thanh Toán" một chút */
+  padding-left: 5px;
+  justify-content: flex-start;
+}
 
-/* Thanh toán */
+/* Từng logo thanh toán */
 .payment-methods img {
-    width: 60px;
-    margin-right: 10px;
+    height: 46px;          /* nhỏ hơn 50px một chút */
+    width: auto;
+    object-fit: contain;
+    background: #9d8989;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 /* COPYRIGHT */
 .footer-bottom {
-    margin-top: 25px;
-    background: #4a7c1a;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    font-size: 15px;
+  margin-top: 15px;
+  background: #56a70a;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 15px;
 }
 
 .footer-bottom span {
-    font-weight: bold;
+  font-weight: bold;
+}
+/*=======sản phẩm breadcrumb =======*/
+.breadcrumb {
+  width: 100%;
+  background: #cbb7b7;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.breadcrumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #c4c9cc;
+}
+
+.breadcrumb-content {
+  font-size: 16px;
+  color: #000;
+}
+
+/* Link Trang Chủ */
+.breadcrumb-content .home-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+.breadcrumb-content .home-link:hover {
+  color: #2a6fdb;
 }
 

@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ĐỒ ÁN NHÓ<Meta:compat></Meta:compat> 11 ĐHV</title>
+  <title>ĐỒ ÁN NHÓM 11 ĐHV</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
@@ -65,10 +64,10 @@
         <span>T2 - T7 Từ 6h Đến 24h</span>
       </div>
     </div>
-   <div class="cart" id="openCart">
-   <i class="fa-solid fa-cart-shopping"></i>
-   <strong>Giỏ hàng(<span id="cart-count">0</span>)</strong>
-</div>
+    <div class="cart">
+      <img src="images/giohang.png" alt="Giỏ Hàng">
+      <strong>Giỏ hàng(0)</strong>
+    </div>
   </header>
 
   <!-- Search -->
@@ -76,126 +75,19 @@
     <input type="text" placeholder="Tìm Kiếm...">
     <button><i class="fa-solid fa-magnifying-glass"></i></button>
   </div>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#">Trang Chủ</a></li>
-      <li><a href="gioithieu.html">Giới Thiệu</a></li>
-      <li><a href="sanpham.html">Sản Phẩm</a></li>
-      <li><a href="lienhe.html">Liên Hệ</a></li>
-      <li><a href="muavu.html">Mùa Vụ Hoa Quả</a></li>
-      <li><a href="tintuc.html">Tin Tức</a></li>
-    </ul>
-  </nav>
-
-    <div class="banner-image">
-      <img src="images/khunganh.png" alt="rau củ quả" />
-    </div>
+  <div class="breadcrumb">
+  <div class="breadcrumb-content">
+    <a href="index.html" class="home-link">Trang Chủ</a> / / Sản Phẩm
   </div>
-
-  <!-- ========== DANH MỤC 1: RAU CỦ SẠCH ========== -->
-  <div class="category">
-    <div class="category-header">
-      <div class="category-tabs">
-        <strong class="active">Rau Củ Sạch</strong>
-        <span>Đặc Sản Vùng Miền</span>
-        <span>Rau Rừng</span>
-      </div>
-      <a href="#" class="view-all">Xem Tất Cả ▾</a>
-    </div>
-
-    <div class="product-list">
+</div>
+<div class="category">
+   <div class="product-list">
 
       <div class="product-card">
-        <span class="discount">-25%</span>
-        <img src="images/raumui.jpg" alt="Ngò rí">
-        <p class="origin">Việt Nam</p>
-        <h3 class="name">Ngò rí - 300G</h3>
-        <p class="price">8.000đ <s>10.000đ</s></p>
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 500</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
-      </div>
-
-      <div class="product-card">
-        <span class="flash-sale">FLASH SALE ⚡</span>
-        <img src="images/caithia.jpg" alt="Cải Thìa">
-        <p class="origin">Việt Nam</p>
-        <h3 class="name">Cải Thìa - 300G</h3>
-        <p class="price">20.000đ</p>
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 1500</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
-      </div>
-
-      <div class="product-card">
-        <img src="images/xalach.jpg" alt="Xà Lách">
-        <p class="origin">Việt Nam</p>
-        <h3 class="name">Xà Lách - 300G</h3>
-        <p class="price">17.000đ <s>20.000đ</s></p>
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 800</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
-      </div>
-
-      <div class="product-card">
-        <img src="images/tiato.jpg" alt="Tía Tô">
-        <p class="origin">Việt Nam</p>
-        <h3 class="name">Lá Tía Tô - 300G</h3>
-        <p class="price">15.000đ</p>
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 100</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
-      </div>
-
-      <div class="product-card">
-        <img src="images/raungot.jpg" alt="Rau Ngót">
-        <p class="origin">Việt Nam</p>
-        <h3 class="name">Rau Ngót - 300G</h3>
-        <p class="price">19.500đ</p>
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 1500</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
-      </div>
-
-      <div class="product-card">
-        <span class="flash-sale">FLASH SALE ⚡</span>
-        <img src="images/ot.jpg" alt="Ớt Palermo">
-        <p class="origin">Việt Nam</p>
-        <h3 class="name">Ớt Palermo - 300G</h3>
-        <p class="price">18.000đ</p>
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 450</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========== DANH MỤC 2: HOA QUẢ ========== -->
-  <div class="category">
-    <div class="category-header">
-      <div class="category-tabs">
-        <strong class="active">Hoa Quả</strong>
-        <span>Hoa quả nội địa</span>
-        <span>Hoa quả nhập khẩu</span>
-      </div>
-      <a href="#" class="view-all">Xem Tất Cả ▾</a>
-    </div>
-
-    <div class="product-list">
-
-      <div class="product-card">
-        <img src="images/vietquat.jpg" alt="Việt Quất Mỹ">
-        <p class="origin">New Zealand</p>
-        <h3 class="name">Việt Quất Mỹ size Jumbo - 125G</h3>
-        <p class="price">139.000đ</p>
+        <img src="images/bo.jpg" alt="Bơ">
+        <span class="discount">-40%</span>
+        <h3 class="name">Bơ booth 7 - 1Kg</h3>
+        <p class="price">55,000đ <s>99,000đ</s></p>
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 1865</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
@@ -203,12 +95,9 @@
       </div>
 
       <div class="product-card">
-        <img src="images/nhodo.jpg" alt="Nho Hàn Quốc">
-        <span class="discount">-38%</span>
-        <div class="flash-sale">FLASH SALE⚡</div>
-        <p class="origin">Hàn Quốc</p>
-        <h3 class="name">Nho Mẫu Đơn Red Royal Vine Premium - 600G</h3>
-        <p class="price">799.000đ <s>1.299.000đ</s></p>
+        <img src="images/mangcut.jpg" alt="Măng cụt">
+        <h3 class="name">Măng cụt - 1Kg</h3>
+        <p class="price">180,000đ</p>
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 500</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
@@ -216,99 +105,71 @@
       </div>
 
       <div class="product-card">
-        <img src="images/taodai.jpg" alt="Táo Pink Lady">
-        <span class="discount">-25%</span>
-        <p class="origin">New Zealand</p>
-        <h3 class="name">Táo Pink Lady New Zealand</h3>
-        <p class="price">59.500đ <s>75.500đ</s></p>
+        <img src="images/chuoi.jpg" alt="Chuối">
+        <span class="discount">-31%</span>
+        <h3 class="name">Chuối Laba org 1Kg</h3>
+         <p class="price">45,000đ <s>65,500đ</s></p>
         <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 1200</p>
+        <p class="sold">Đã bán 23075</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
         <button class="add-btn">🛒 Thêm vào giỏ</button>
       </div>
 
       <div class="product-card">
-        <img src="images/nhoxanh.jpg" alt="Nho xanh Mỹ">
-        <span class="discount">-40%</span>
-        <p class="origin">Mỹ</p>
-        <h3 class="name">Nho xanh Sweet Globe Polar - 500G</h3>
-        <p class="price">149.000đ <s>500.000đ</s></p>
+        <img src="images/cam.jpg" alt="Nho xanh Mỹ">
+        <span class="discount">-19%</span>
+        <h3 class="name"> Quýt Úc Iron Bank size 48 - 1kg</h3>
+        <p class="price">150,500đ <s>182,000đ</s></p>
         <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 1549</p>
+        <p class="sold">Đã bán 3075</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
         <button class="add-btn">🛒 Thêm vào giỏ</button>
       </div>
 
       <div class="product-card">
-        <img src="images/nhan.jpg" alt="Nhãn hữu cơ">
-        <p class="origin">Việt Nam</p>
-        <h3 class="name">Thanh nhãn hữu cơ - 500G</h3>
-        <p class="price">99.000đ</p>
+        <img src="images/luu.jpg" alt="Nhãn hữu cơ">
+        <h3 class="name">Lựu Đỏ - 1Kg</h3>
+        <p class="price">180,500đ</p>
         <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 1980</p>
+        <p class="sold">Đã bán 4295</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
         <button class="add-btn">🛒 Thêm vào giỏ</button>
       </div>
-
-      <div class="product-card">
-        <img src="images/taochery.jpg" alt="Táo Cherry mini">
-        <span class="discount">-25%</span>
-        <p class="origin">Mỹ</p>
-        <h3 class="name">Táo Cherry mini nội địa Trung - 500G</h3>
-        <p class="price">59.000đ <s>99.000đ</s></p>
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 1590</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
-      </div>
-
     </div>
   </div>
-
-  <!-- ========== DANH MỤC 3: QUÀ TẶNG TRÁI CÂY ========== -->
   <div class="category">
-    <div class="category-header">
-      <div class="category-tabs">
-        <strong class="active">Quà Tặng Trái Cây</strong>
-        <span>Nội địa</span>
-        <span>Quốc tế</span>
-      </div>
-      <a href="#" class="view-all">Xem Tất Cả ▾</a>
-    </div>
-
+  
     <div class="product-list">
       <div class="product-card">
         
-        <img src="images/hop1.jpg" alt="Hộp quà trái cây ">
-        <span class="discount">-44%</span>
-        <div class="flash-sale">FLASH SALE⚡</div>
+        <img src="images/taoxanh.jpg" alt="Hộp quà trái cây ">
         <p class="origin">Viet Nam</p>
-        <h3 class="name">Hộp quà trái cây </h3>
-        <p class="price">319,000đ<s>569,000đ</s></p> 
+        <h3 class="name">Táo Xanh Hữu Cơ - 1Kg</h3>
+        <p class="price">90,000đ</p> 
         <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 150</p>
+        <p class="sold">Đã bán 10045</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
         <button class="add-btn">🛒 Thêm vào giỏ</button>
     </div>
       <div class="product-card">
         >
-        <img src="images/hop2.jpg" alt="Hộp quà trái cây ">
-        <span class="discount">-30%</span>
+        <img src="images/vai.jpg" alt="Hộp quà trái cây ">
         <p class="origin">Viet Nam</p>
-        <h3 class="name">Hộp quà trái cây </h3>
-        <p class="price">349,000đ<s>499,000đ</s></p> 
+        <h3 class="name">Vãi U Hồng Lục Ngạn Bắc Giang - 1Kg </h3>
+        <p class="price">80,000đ</p> 
         <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 200</p>
+        <p class="sold">Đã bán 6500</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
         <button class="add-btn">🛒 Thêm vào giỏ</button>
   </div>
       <div class="product-card">
     
-        <img src="images/hop3.jpg" alt="Hộp quà trái cây ">
-        <span class="discount">-20%</span>
+        <img src="images/nhanlong.jpg" alt="Hộp quà trái cây ">
+        <span class="discount">-34%</span>
+        <div class="flash-sale">FLASH SALE⚡</div>
         <p class="origin">Viet Nam</p>
-        <h3 class="name">Hộp quà trái cây </h3>
-        <p class="price">399,000đ<s>499,000đ</s></p> 
+        <h3 class="name">Nhãn lồng - 1kg </h3>
+        <p class="price">26,500đ<s>31,000đ</s></p> 
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 250</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
@@ -316,73 +177,150 @@
   </div>
       <div class="product-card">
         
-        <img src="images/hop4.jpg" alt="Hộp quà trái cây ">
-        <span class="discount">-35%</span>
-        <div class="flash-sale">FLASH SALE⚡</div>
+        <img src="images/dau.jpg" alt="Hộp quà trái cây ">
         <p class="origin">Viet Nam</p>
-        <h3 class="name">Hộp quà trái cây </h3>
-        <p class="price">299,000đ<s>459,000đ</s></p> 
+        <h3 class="name">Dâu tây úc 250g </h3>
+        <p class="price">251,000đ</p> 
         <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 300</p>
+        <p class="sold">Đã bán 4870</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
         <button class="add-btn">🛒 Thêm vào giỏ</button>
   </div>
       <div class="product-card">
         
-        <img src="images/hop5.jpg" alt="Hộp quà trái cây ">
-        <span class="discount">-28%</span>
+        <img src="images/vusua.jpg" alt="Hộp quà trái cây ">
         <p class="origin">Viet Nam</p>
-        <h3 class="name">Hộp quà trái cây </h3>
-        <p class="price">359,000đ<s>499,000đ</s></p> 
+        <h3 class="name">Vú sữa bơ hồng</h3>
+        <p class="price">134,000đ</p> 
         <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 180</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
-  </div>
-      <div class="product-card">
-        
-        <img src="images/hop6.jpg" alt="Hộp quà trái cây ">
-        <span class="discount">-32%</span>
-        <div class="flash-sale">FLASH SALE⚡</div>
-        <p class="origin">Viet Nam</p>
-        <h3 class="name">Hộp quà trái cây </h3>
-        <p class="price">279,000đ<s>409,000đ</s></p> 
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 220</p>
+        <p class="sold">Đã bán 1209</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
         <button class="add-btn">🛒 Thêm vào giỏ</button>
   </div>
     </div>
- <div class="home-extra">
-  <!-- ===== Tiêu đề Xem thêm sản phẩm ===== -->
-  <div class="section-title">
-      <span>Xem Thêm Sản Phẩm</span>
   </div>
-
-  <!-- ===== Banner bên dưới ===== -->
-  <div class="banner-row">
-      <div class="banner-item">
-          <img src="images/anh1.jpg" alt="">
-      </div>
-
-      <div class="banner-item">
-          <img src="images/anh2.jpg" alt="">
-      </div>
+  <div class="category">
+  
+    <div class="product-list">
+      <div class="product-card">
+        
+        <img src="images/hoptao.jpg" alt="Hộp quà trái cây ">
+        <span class="discount">-19%</span>
+        <p class="origin">Viet Nam</p>
+        <h3 class="name">Táo đỏ hữu cơ Dazzle size 70-90 - thùng 17kg </h3>
+        <p class="price">2,750,500đ<s>3,383,000đ</s></p> 
+        <p class="review">Đánh giá</p>
+        <p class="sold">Đã bán 121</p>
+        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
+        <button class="add-btn">🛒 Thêm vào giỏ</button>
+    </div>
+      <div class="product-card">
+        >
+        <img src="images/duahau.jpg" alt="Hộp quà trái cây ">
+        <p class="origin">Bắc Giang</p>
+        <h3 class="name">Dưa hấu có hạt hữu cơ - 1KG</h3>
+        <p class="price">73,000đ</p> 
+        <p class="review">Đánh giá</p>
+        <p class="sold">Đã bán 15060</p>
+        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
+        <button class="add-btn">🛒 Thêm vào giỏ</button>
   </div>
-
-  <!-- ===== Tiêu đề Báo chí ===== -->
-  <div class="section-title">
-      <span>Báo Chí Viết Về Nông Sản Nhóm 11</span>
+      <div class="product-card">
+    
+        <img src="images/thanhlong.jpg" alt="Hộp quà trái cây ">
+        <p class="origin">Viet Nam</p>
+        <h3 class="name">Thanh long trắng hữu cơ </h3>
+        <p class="price">46,500đ</p> 
+        <p class="review">Đánh giá</p>
+        <p class="sold">Đã bán 13405</p>
+        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
+        <button class="add-btn">🛒 Thêm vào giỏ</button>
   </div>
-
-  <!-- ===== Danh sách logo báo chí ===== -->
-  <div class="media-logos">
-      <img src="images/24h.jpg" alt="">
-      <img src="images/vietbao.jpg" alt="">
-      <img src="images/phapluat.jpg" alt="">
-      <img src="images/dantri.jpg" alt="">
+      <div class="product-card">
+        
+        <img src="images/dudu.jpg" alt="Hộp quà trái cây ">
+        <div class="flash-sale">FLASH SALE⚡</div>
+        <p class="origin">Viet Nam</p>
+        <h3 class="name">Đu đủ ruột đỏ</h3>
+        <p class="price">55,000đ</p> 
+        <p class="review">Đánh giá</p>
+        <p class="sold">Đã bán 1545</p>
+        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
+        <button class="add-btn">🛒 Thêm vào giỏ</button>
   </div>
-</div> 
+      <div class="product-card">
+        
+        <img src="images/dao.jpg" alt="Hộp quà trái cây ">
+        <p class="origin">Viet Nam</p>
+        <h3 class="name">Đào</h3>
+        <p class="price">158,000đ</p> 
+        <p class="review">Đánh giá</p>
+        <p class="sold">Đã bán 9700</p>
+        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
+        <button class="add-btn">🛒 Thêm vào giỏ</button>
+  </div>
+    </div>
+  </div>
+  <div class="category">
+  
+    <div class="product-list">
+      <div class="product-card">
+        
+        <img src="images/dua.jpg" alt="Hộp quà trái cây ">
+        <p class="origin">Viet Nam</p>
+        <h3 class="name">Dứa</h3>
+        <p class="price">38,000đ</p> 
+        <p class="review">Đánh giá</p>
+        <p class="sold">Đã bán 7600</p>
+        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
+        <button class="add-btn">🛒 Thêm vào giỏ</button>
+    </div>
+      <div class="product-card">
+        >
+        <img src="images/bongbong.jpg" alt="Hộp quà trái cây ">
+        <p class="origin">Bắc Giang</p>
+        <h3 class="name">Mận đỏ</h3>
+        <p class="price">40,000đ</p> 
+        <p class="review">Đánh giá</p>
+        <p class="sold">Đã bán 3400</p>
+        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
+        <button class="add-btn">🛒 Thêm vào giỏ</button>
+  </div>
+      <div class="product-card">
+    
+        <img src="images/saurieng.jpg" alt="Hộp quà trái cây ">
+        <p class="origin">Viet Nam</p>
+        <h3 class="name">Sầu riêng </h3>
+        <p class="price">120,000đ</p> 
+        <p class="review">Đánh giá</p>
+        <p class="sold">Đã bán 20598</p>
+        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
+        <button class="add-btn">🛒 Thêm vào giỏ</button>
+  </div>
+      <div class="product-card">
+        
+        <img src="images/na.jpg" alt="Hộp quà trái cây ">
+        <p class="origin">Viet Nam</p>
+        <h3 class="name">Na Thái - 1KG</h3>
+        <p class="price">139,500đ</p> 
+        <p class="review">Đánh giá</p>
+        <p class="sold">Đã bán 3970</p>
+        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
+        <button class="add-btn">🛒 Thêm vào giỏ</button>
+  </div>
+      <div class="product-card">
+        
+        <img src="images/rodao.jpg" alt="Hộp quà trái cây ">
+        <p class="origin">Viet Nam</p>
+        <h3 class="name">Cherry Vàng Mỹ</h3>
+        <p class="price">172,500đ</p> 
+        <p class="review">Đánh giá</p>
+        <p class="sold">Đã bán 1949</p>
+        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
+        <button class="add-btn">🛒 Thêm vào giỏ</button>
+  </div>
+    </div>
+  </div>
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
   <div class="footer-container">
@@ -458,6 +396,6 @@
       © Bản quyền thuộc về <span>Nhóm 11</span> | Cung cấp bởi <span>TuTu</span>.
   </div>
 </footer>
-<script src="java.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
