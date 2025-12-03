@@ -2,8 +2,6 @@ let cartCount = 0;
 
 // Lấy phần hiển thị số lượng trong giỏ hàng
 const cartDisplay = document.getElementById("cart-count");
-
-// Lấy tất cả nút "Thêm vào giỏ"
 const addButtons = document.querySelectorAll(".add-btn");
 
 // Kiểm tra nếu tìm thấy giỏ hàng
