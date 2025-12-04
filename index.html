@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ĐỒ ÁN NHÓ<Meta:compat></Meta:compat> 11 ĐHV</title>
+  <title>ĐỒ ÁN NHÓM 11 ĐHV</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -65,9 +65,9 @@
         <span>T2 - T7 Từ 6h Đến 24h</span>
       </div>
     </div>
-   <a href="giohang.html" class="cart" id="openCart">
+   <a href="giohang.html" class="btn-cart">
   <i class="fa-solid fa-cart-shopping"></i>
-  <strong>Giỏ hàng(<span id="cart-count">0</span>)</strong>
+  Giỏ hàng(<span id="cart-count">0</span>)
 </a>
   </header>
 
@@ -108,19 +108,23 @@
     <div class="product-list">
 
       <div class="product-card">
+        <div class="product-img-box">
         <span class="discount">-25%</span>
         <img src="images/raumui.jpg" alt="Ngò rí">
+        </div>
         <p class="origin">Việt Nam</p>
         <h3 class="name">Ngò rí - 300G</h3>
         <p class="price">8.000đ <s>10.000đ</s></p>
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 500</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+        <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
       </div>
 
       <div class="product-card">
-        <span class="flash-sale">FLASH SALE ⚡</span>
+         <div class="product-img-box">
+          <img src="images/sale.png" class="flash-sale-badge" alt="Flash sale">
+         </div>
         <img src="images/caithia.jpg" alt="Cải Thìa">
         <p class="origin">Việt Nam</p>
         <h3 class="name">Cải Thìa - 300G</h3>
@@ -128,7 +132,7 @@
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 1500</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+        <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
       </div>
 
       <div class="product-card">
@@ -139,7 +143,7 @@
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 800</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+        <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
       </div>
 
       <div class="product-card">
@@ -150,7 +154,7 @@
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 100</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+        <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
       </div>
 
       <div class="product-card">
@@ -161,11 +165,13 @@
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 1500</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+       <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
       </div>
 
       <div class="product-card">
-        <span class="flash-sale">FLASH SALE ⚡</span>
+        <div class="product-img-box">
+          <img src="images/sale.png" class="flash-sale-badge" alt="Flash sale">
+        </div>
         <img src="images/ot.jpg" alt="Ớt Palermo">
         <p class="origin">Việt Nam</p>
         <h3 class="name">Ớt Palermo - 300G</h3>
@@ -173,7 +179,7 @@
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 450</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+        <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
       </div>
     </div>
   </div>
@@ -199,44 +205,50 @@
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 1865</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">Thêm vào giỏ 🛒</button>
+        <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
       </div>
 
       <div class="product-card">
-        <img src="images/nhodo.jpg" alt="Nho Hàn Quốc">
+        <div class="product-img-box">
+          <img src="images/nhodo.jpg" alt="Nho Hàn Quốc">
         <span class="discount">-38%</span>
-        <div class="flash-sale">FLASH SALE⚡</div>
+       <img src="images/sale.png" class="flash-sale-badge" alt="Flash sale">
+        </div>
         <p class="origin">Hàn Quốc</p>
         <h3 class="name">Nho Mẫu Đơn Red Royal Vine Premium - 600G</h3>
         <p class="price">799.000đ <s>1.299.000đ</s></p>
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 500</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+       <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
       </div>
 
       <div class="product-card">
-        <img src="images/taodai.jpg" alt="Táo Pink Lady">
+        <div class="product-img-box">
+          <img src="images/taodai.jpg" alt="Táo Pink Lady">
         <span class="discount">-25%</span>
+        </div>
         <p class="origin">New Zealand</p>
         <h3 class="name">Táo Pink Lady New Zealand</h3>
         <p class="price">59.500đ <s>75.500đ</s></p>
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 1200</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+        <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
       </div>
 
       <div class="product-card">
-        <img src="images/nhoxanh.jpg" alt="Nho xanh Mỹ">
+        <div class="product-img-box">
+           <img src="images/nhoxanh.jpg" alt="Nho xanh Mỹ">
         <span class="discount">-40%</span>
+        </div>
         <p class="origin">Mỹ</p>
         <h3 class="name">Nho xanh Sweet Globe Polar - 500G</h3>
         <p class="price">149.000đ <s>500.000đ</s></p>
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 1549</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+       <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
       </div>
 
       <div class="product-card">
@@ -247,19 +259,21 @@
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 1980</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+        <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
       </div>
 
       <div class="product-card">
-        <img src="images/taochery.jpg" alt="Táo Cherry mini">
+        <div class="product-img-box">
+          <img src="images/taochery.jpg" alt="Táo Cherry mini">
         <span class="discount">-25%</span>
+        </div>
         <p class="origin">Mỹ</p>
         <h3 class="name">Táo Cherry mini nội địa Trung - 500G</h3>
         <p class="price">59.000đ <s>99.000đ</s></p>
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 1590</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+       <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
       </div>
 
     </div>
@@ -278,53 +292,61 @@
 
     <div class="product-list">
       <div class="product-card">
-        
-        <img src="images/hop1.jpg" alt="Hộp quà trái cây ">
+    <!-- KHUNG RIÊNG CHO ẢNH + GIẢM GIÁ + FLASH SALE -->
+    <div class="product-img-box">
         <span class="discount">-44%</span>
-        <div class="flash-sale">FLASH SALE⚡</div>
-        <p class="origin">Viet Nam</p>
-        <h3 class="name">Hộp quà trái cây </h3>
-        <p class="price">319,000đ<s>569,000đ</s></p> 
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 150</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+        <img src="images/hop1.jpg" class="product-img" alt="Hộp quà trái cây">
+        <img src="images/sale.png" class="flash-sale-badge" alt="Flash sale">
     </div>
+
+    <p class="origin">Viet Nam</p>
+    <h3 class="name">Hộp quà trái cây</h3>
+    <p class="price">319,000đ <s>569,000đ</s></p>
+    <p class="review">Đánh giá</p>
+    <p class="sold">Đã bán 150</p>
+    <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
+    <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
+</div>
+
       <div class="product-card">
+        <div class="product-img-box">
         <img src="images/hop2.jpg" alt="Hộp quà trái cây ">
         <span class="discount">-30%</span>
+        </div>
         <p class="origin">Viet Nam</p>
         <h3 class="name">Hộp quà trái cây </h3>
         <p class="price">349,000đ<s>499,000đ</s></p> 
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 200</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+        <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
   </div>
       <div class="product-card">
-    
+        <div class="product-img-box">
         <img src="images/hop3.jpg" alt="Hộp quà trái cây ">
         <span class="discount">-20%</span>
+        </div>
         <p class="origin">Viet Nam</p>
         <h3 class="name">Hộp quà trái cây </h3>
         <p class="price">399,000đ<s>499,000đ</s></p> 
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 250</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+        <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
   </div>
       <div class="product-card">
-        
-        <img src="images/hop4.jpg" alt="Hộp quà trái cây ">
+        <div class="product-img-box">
+          <img src="images/hop4.jpg" alt="Hộp quà trái cây ">
         <span class="discount">-35%</span>
-        <div class="flash-sale">FLASH SALE⚡</div>
+       <img src="images/sale.png" class="flash-sale-badge" alt="Flash sale">
+        </div>
         <p class="origin">Viet Nam</p>
         <h3 class="name">Hộp quà trái cây </h3>
         <p class="price">299,000đ<s>459,000đ</s></p> 
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 300</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+       <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
   </div>
       <div class="product-card">
         
@@ -336,20 +358,21 @@
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 180</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+        <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
   </div>
       <div class="product-card">
-        
+        <div class="product-img-box">
         <img src="images/hop6.jpg" alt="Hộp quà trái cây ">
         <span class="discount">-32%</span>
-        <div class="flash-sale">FLASH SALE⚡</div>
+       <img src="images/sale.png" class="flash-sale-badge" alt="Flash sale">
+        </div>
         <p class="origin">Viet Nam</p>
         <h3 class="name">Hộp quà trái cây </h3>
         <p class="price">279,000đ<s>409,000đ</s></p> 
         <p class="review">Đánh giá</p>
         <p class="sold">Đã bán 220</p>
         <div class="rating">⭐⭐⭐⭐⭐ (0)</div>
-        <button class="add-btn">🛒 Thêm vào giỏ</button>
+        <button class="them-gio-hang">🛒 Thêm vào giỏ</button>
   </div>
     </div>
  <div class="home-extra">
