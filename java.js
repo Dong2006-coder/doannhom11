@@ -1,18 +1,56 @@
-let cartCount = 0;
+/* ==========================
+   GIỎ HÀNG - NHÓM 11
+   DÙNG LOCALSTORAGE CHO TẤT CẢ TRANG
+========================== */
+
+// LẤY GIÁ TRỊ ĐÃ LƯU TRONG LOCALSTORAGE (NẾU CHƯA CÓ THÌ = 0)
+let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
+
 // Lấy phần hiển thị số lượng trong giỏ hàng
 const cartDisplay = document.getElementById("cart-count");
-const addButtons = document.querySelectorAll(".them-gio-hang");
-// Kiểm tra nếu tìm thấy giỏ hàng
-if (cartDisplay) {
-    addButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            cartCount++;
-            cartDisplay.textContent = cartCount;
-        });
-    });
-} else {
-    console.log("Không tìm thấy #cart-count");
+
+
+// Hàm cập nhật hiển thị lên giao diện
+function updateCartCount() {
+    if (cartDisplay) {
+        cartDisplay.textContent = cartCount;
+    }
 }
+
+
+// ===== CẬP NHẬT NGAY KHI LOAD TRANG =====
+updateCartCount();
+
+
+// ===== XỬ LÝ NÚT "THÊM GIỎ HÀNG" =====
+const addButtons = document.querySelectorAll(".them-gio-hang");
+
+addButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        cartCount++; // tăng số lượng
+
+        // LƯU LẠI VÀO LOCAL STORAGE
+        localStorage.setItem("cartCount", cartCount);
+
+        // Hiển thị lại số
+        updateCartCount();
+    });
+});
+
+
+
+/* ===========================================================
+   ẨN SỐ GIỎ HÀNG KHI VÀO TRANG THANH TOÁN
+   - Nếu URL chứa "checkout" hoặc "thanhtoan" → Ẩn số
+=========================================================== */
+const currentPage = window.location.href;
+
+if (currentPage.includes("checkout") || currentPage.includes("thanhtoan")) {
+    if (cartDisplay) {
+        cartDisplay.style.display = "none";  // ẨN SỐ GIỎ HÀNG
+    }
+}
+
 // ===  BÌNH   ===//
 //================= TĂNG GIỎ HÀNG =================//
 const cartWrapper = document.querySelector('.cart-wrapper .cart-table');
