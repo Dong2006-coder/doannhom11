@@ -1,7 +1,3 @@
-/* ==========================
-   GIỎ HÀNG - NHÓM 11
-   DÙNG LOCALSTORAGE CHO TẤT CẢ TRANG
-========================== */
 
 // LẤY GIÁ TRỊ ĐÃ LƯU TRONG LOCALSTORAGE (NẾU CHƯA CÓ THÌ = 0)
 let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
@@ -16,6 +12,22 @@ function updateCartCount() {
         cartDisplay.textContent = cartCount;
     }
 }
+const menuItems = document.querySelectorAll('.navbar ul li a');
+
+menuItems.forEach(link => {
+
+    // Kiểm tra URL trùng → thêm active vào <li>
+    if (link.href === window.location.href) {
+        link.parentElement.classList.add('active');
+    }
+
+    // Khi click → đổi active ngay lập tức
+    link.addEventListener("click", function () {
+        menuItems.forEach(l => l.parentElement.classList.remove("active"));
+        this.parentElement.classList.add("active");
+    });
+});
+
 
 
 // ===== CẬP NHẬT NGAY KHI LOAD TRANG =====

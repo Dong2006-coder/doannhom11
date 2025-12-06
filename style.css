@@ -1,5 +1,5 @@
 /*=========================CODE CHUNG==========================*/
-/* ======================= 1. GLOBAL & RESET ======================= */
+/* ======================= . GLOBAL & RESET ======================= */
 * {
   box-sizing: border-box;
 }
@@ -11,7 +11,7 @@ body {
 }
 
 
-/* ======================= 2. TOPBAR (THANH XANH LÁ TRÊN CÙNG) ======================= */
+/* ======================= . TOPBAR (THANH XANH LÁ TRÊN CÙNG) ======================= */
 .tieu-de {
   background-color: #6a8c2d;
   color: #fff;
@@ -23,7 +23,11 @@ body {
   flex-wrap: wrap;
 }
 
-.topbar-left,
+.topbar-left{
+  color: #fff;
+    padding: 8px 20px; 
+    font-size: 14px;
+}
 .tieu-de-con,
 .tieu-de-phu {
   display: flex;
@@ -61,7 +65,7 @@ body {
 }
 
 
-/* ======================= 3. HEADER (LOGO + 4 Ô THÔNG TIN + GIỎ HÀNG) ======================= */
+/* ======================= . HEADER (LOGO + 4 Ô THÔNG TIN + GIỎ HÀNG) ======================= */
 .header {
   background-color: #fff;
   display: flex;
@@ -129,7 +133,7 @@ body {
     padding: 0;
 }
 /*=========================KẾT THÚC CODE CHUNG==========================*/
-/* ======================= 4. THANH TÌM KIẾM ======================= */
+/* ======================= . THANH TÌM KIẾM ======================= */
 .search-bar {
   display: flex;
   justify-content: flex-end;
@@ -153,33 +157,7 @@ body {
   cursor: pointer;
 }
 
-
-/* ======================= 5. NAVBAR (THANH MENU CHÍNH) ======================= */
-.navbar {
-  background-color: #f7fbe8;
-  border-bottom: 1px solid #ac8252;
-}
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 0;
-   padding-left: 30px;
-}
-.navbar a {
-  text-decoration: none;
-  color: #56742a;
-  font-weight: bold;
-}
-.navbar a:hover {
-  color: #2c510b;
-}
-
-
-/* ======================= 6. KHUNG TỔNG: SIDEBAR + BANNER ======================= */
+/* ======================= . KHUNG TỔNG: SIDEBAR + BANNER ======================= */
 .container {
   width: 96%;
   margin: 10px auto 0;
@@ -226,15 +204,51 @@ body {
 }
 /*========================KẾT THÚC====================*/
 /* ======================= PHẦN CỦA ĐỒNG. KHỐI DANH MỤC (CATEGORY BOX) ======================= */
+/* =======================  NAVBAR (THANH MENU CHÍNH) ======================= */
+.navbar {
+  background-color: #f7fbe8;
+  border-bottom: 1px solid #150c01;
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 0;
+   padding-left: 30px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #56742a;
+  font-weight: bold;
+}
+.navbar a:hover {
+  color: #2c510b;
+}
+/* Style menu item */
+.navbar ul li {
+    padding: 8px 16px;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover */
+.navbar ul li:hover {
+    background-color: #6a8c2d;   /* màu giống ảnh bạn gửi */
+}
+
+
 .category {
   width: 100%;
    max-width: 100%;
   margin: 25px auto;
   background: #ffffff;
   border-radius: 12px;
-  padding:0;
   box-shadow: 0 0 6px rgba(0,0,0,0.05);
    box-sizing: border-box;
+    padding: 8px 20px;  /* thêm padding trái/phải */
 }
 
 /* Phần header của mỗi danh mục (Rau củ sạch / Hoa quả / Quà tặng...) */
@@ -280,9 +294,8 @@ body {
 /* ======================= 8. (GRID) ======================= */
 /* ========== DANH SÁCH SẢN PHẨM ========== */
 .product-list {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));  /* đúng 6 cột */
-  gap: 20px;
+  display: flex;
+  gap: flex;
   margin-top: 18px;
 }
 
@@ -376,7 +389,7 @@ body {
 
 /* Nút thêm vào giỏ */
 .them-gio-hang {
-  background: #d0a422;
+  background: #aa8412;
   color: #fff;
   border: none;
   padding: 8px 12px;
@@ -473,6 +486,32 @@ body {
     border-radius: 12px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
+.nhan-link {
+    width: 100%;
+    background: #cbb7b7;
+    padding: 10px 20px;
+    position: relative;
+    font-size: 15px;
+    color: #210303;
+    font-weight: bold;
+    overflow-x: hidden;
+
+}
+
+.nhan-link a {
+    color: #4b6f1d;
+    text-decoration: none;
+}
+
+.nhan-link a:hover {
+    text-decoration: underline;
+}
+
+.nhan-link .current {
+    color: #190303;
+    font-weight: bold;
+}
+
 /*====================KẾT THÚC PHẦN CỦA ĐỒNG==================*/
 /*=========================Bình==============*/
 * {
@@ -1236,39 +1275,12 @@ hr {
   text-align: center;
   padding: 12px;
   font-size: 15px;
+  flex-direction: column;
+  padding: 10px 0;
 }
 
 .footer-bottom span {
   font-weight: bold;
-}
-/*=======sản phẩm breadcrumb =======*/
-.breadcrumb {
-  width: 100%;
-  background: #cbb7b7;
-  padding: 10px 20px;
-  position: relative;
-}
-
-.breadcrumb::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background: #c4c9cc;
-}
-
-.breadcrumb-content {
-  font-size: 16px;
-  color: #000;
-}
-
-/* Link Trang Chủ */
-.breadcrumb-content .home-link {
-  text-decoration: none;
-  font-weight: bold;
-  color: #000;
 }
 
 
