@@ -77,22 +77,16 @@
   </div>
   <div class="breadcrumb">
   <div class="breadcrumb-content">
-    <a href="index.html" class="home-link">Trang Chủ</a> / / Giỏ Hàng
+    <a href="index.html" class="home-link">Trang Chủ</a> / / Giới Thiệu
   </div>
 </div>
 
-    <!-- Title -->
     <h2 class="title">Giỏ hàng của bạn</h2>
-    <p class="subtitle">
-        Dưới đây là danh sách sản phẩm trong giỏ hàng.  
-        Vui lòng kiểm tra và tiến hành thanh toán.
-    </p>
+    <p class="subtitle">Dưới đây là danh sách sản phẩm trong giỏ hàng. Vui lòng kiểm tra và tiến hành thanh toán.</p>
 
     <!-- Cart table -->
     <div class="cart-wrapper">
-
         <div class="cart-table">
-
             <div class="header-row row">
                 <div>HÌNH ẢNH</div>
                 <div>TÊN SẢN PHẨM</div>
@@ -102,177 +96,69 @@
                 <div>THÀNH TIỀN</div>
                 <div>XÓA</div>
             </div>
-
-            <div class="row product-row">
-
-                <div><img src="images/mangcut.jpg" class="product-img"></div>
-                <div class="product-name">Măng Cụt Hữu Cơ - 1kg</div>
-                <div>180,000₫</div>
-
-                <div><input type="number" value="1" class="qty"></div>
-
-                <div>KG</div>
-                <div>180,000₫</div>
-
-                <div>
-                    <button class="delete-btn">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
-
-            </div>
-
+            <!-- Các sản phẩm sẽ được JS thêm vào đây -->
         </div>
-
     </div>
 
     <!-- Action buttons -->
     <div class="action-area">
-
         <div class="left-actions">
             <button class="cancel-btn">HỦY ĐẶT HÀNG</button>
             <button class="update-btn">CẬP NHẬT GIỎ HÀNG</button>
         </div>
-
         <div class="right-actions">
-
             <div class="summary">
                 <span>TỔNG GIÁ TRỊ:</span>
-
-                <input type="text" class="total" value="180,000₫" readonly>
+                <input type="text" class="total" value="0₫" readonly>
             </div>
-           <a href="thanhtoan.html" class="btn-thanh-toan">THANH TOÁN</a>
+            <a href="thanhtoan.html" class="btn-thanh-toan">THANH TOÁN</a>
         </div>
     </div>
-    
 
+    <!-- Sản phẩm bán chạy -->
+    <h2 class="popular-title">SẢN PHẨM BÁN CHẠY</h2>
+    <div class="product-list">
+        <div class="product-card">
+            <img src="images/otchuong.jpg" alt="Ớt Chuông Đà Lạt">
+            <p class="origin">Đà Lạt</p>
+            <h3 class="name">Ớt Chuông Đà Lạt - 1KG</h3>
+            <p class="price">79.000đ</p>
+            <div class="rating">⭐⭐⭐⭐⭐ (32)</div>
+            <button class="add-btn" data-name="Ớt Chuông Đà Lạt - 1KG" data-price="79000">Thêm vào giỏ 🛒</button>
+        </div>
 
-<!-- Tiêu đề sản phẩm bán chạy -->
-<h2 class="popular-title">SẢN PHẨM BÁN CHẠY</h2>
+        <div class="product-card">
+            <img src="images/bo.jpg" alt="Bơ sáp">
+            <p class="origin">Đắk Lắk</p>
+            <h3 class="name">Bơ Sáp Loại 1 - 1KG</h3>
+            <p class="price">99.000đ</p>
+            <div class="rating">⭐⭐⭐⭐⭐ (21)</div>
+            <button class="add-btn" data-name="Bơ Sáp Loại 1 - 1KG" data-price="99000">Thêm vào giỏ 🛒</button>
+        </div>
+<div class="product-card">
+            <img src="images/hatdieuhong.jpg" alt="Hạt điều hồng lạt">
+            <p class="origin">Bình Phước</p>
+            <h3 class="name">Hạt Điều Hồng Lạt - 500G</h3>
+            <p class="price">139.000đ</p>
+            <div class="rating">⭐⭐⭐⭐⭐ (54)</div>
+            <button class="add-btn" data-name="Hạt Điều Hồng Lạt - 500G" data-price="139000">Thêm vào giỏ 🛒</button>
+        </div>
 
-<!-- Danh sách sản phẩm -->
-<div class="product-list">
-
-    <div class="product-card">
-        <img src="images/otchuong.jpg" alt="Ớt chuông Đà Lạt">
-        <p class="origin">Đà Lạt</p>
-        <h3 class="name">Ớt Chuông Đà Lạt - 1KG</h3>
-        <p class="price">79.000đ</p>
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 1200</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (32)</div>
-        <button class="add-btn">Thêm vào giỏ 🛒</button>
+        <div class="product-card">
+            <img src="images/nho.jpg" alt="Nho đen không hạt">
+            <p class="origin">Úc</p>
+            <h3 class="name">Nho Đen Không Hạt - 500G</h3>
+            <p class="price">125.000đ</p>
+            <div class="rating">⭐⭐⭐⭐⭐ (76)</div>
+            <button class="add-btn" data-name="Nho Đen Không Hạt - 500G" data-price="125000">Thêm vào giỏ 🛒</button>
+        </div>
     </div>
-
-    <div class="product-card">
-        <img src="images/bo.jpg" alt="Bơ sáp">
-        <p class="origin">Đắk Lắk</p>
-        <h3 class="name">Bơ Sáp Loại 1 - 1KG</h3>
-        <p class="price">99.000đ</p>
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 980</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (21)</div>
-<button class="add-btn">Thêm vào giỏ 🛒</button>
-    </div>
-
-    <div class="product-card">
-        <img src="images/hatdieuhong.jpg" alt="Hạt điều hồng lạt">
-        <p class="origin">Bình Phước</p>
-        <h3 class="name">Hạt Điều Hồng Lạt - 500G</h3>
-        <p class="price">139.000đ</p>
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 2340</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (54)</div>
-        <button class="add-btn">Thêm vào giỏ 🛒</button>
-    </div>
-
-    <div class="product-card">
-        <img src="images/nho.jpg" alt="Nho đen không hạt">
-        <p class="origin">Úc</p>
-        <h3 class="name">Nho Đen Không Hạt - 500G</h3>
-        <p class="price">125.000đ</p>
-        <p class="review">Đánh giá</p>
-        <p class="sold">Đã bán 3100</p>
-        <div class="rating">⭐⭐⭐⭐⭐ (76)</div>
-        <button class="add-btn">Thêm vào giỏ 🛒</button>
-    </div>
-
-</div>
-    <!-- ========== FOOTER ========== -->
-<footer class="footer">
-  <div class="footer-container">
-
-   <!-- CỘT 1: GIỚI THIỆU -->
-<div class="footer-col">
-    <div class="footer-about-header">
-        <img src="images/logo.png" class="footer-logo" alt="">
-        <h3>Giới thiệu</h3>
-    </div>
-
-    <p>Công Ty CP Đầu Tư Và Phát Triển Nông Trại Hữu Cơ.</p>
-    <p class="highlight">Giá siêu tốt - Giao siêu tốc.</p>
-
-    <p><i class="fa-solid fa-location-dot"></i> Địa chỉ: Xóm Phú Thành, Xã Lam Thành, Nghệ An.</p>
-    <p><i class="fa-solid fa-clock"></i> Giờ mở cửa: 7h00 – 12h và 13h30 đến 22h hàng ngày.</p>
-    <p><i class="fa-solid fa-phone"></i> SDT: 091.886.5767</p>
-    <p><i class="fa-solid fa-envelope"></i> Gmail: Nhom112006@gmail.com</p>
-    <a href="#" target="_blank">
-    <img src="https://hoaquafuji.com/themes/hoaquafuji/assets/images/logoSaleNoti.png" 
-         class="notify-img" 
-         alt="Thông báo Bộ Công Thương">
-</a>
-
+    <!--THÔNG BÁO GIỎ HÀNG-->
+   <div id="toast" class="toast-message">
+    <i class="fa-solid fa-circle-check"></i>
+    <span class="text">Cập nhật giỏ hàng thành công!</span>
 </div>
 
-    <!-- CỘT 2: HỖ TRỢ KHÁCH HÀNG -->
-    <div class="footer-col">
-        <h3>Hỗ Trợ Khách Hàng</h3>
-        <ul>
-            <li>Các câu hỏi thường gặp.</li>
-            <li>Hướng dẫn đặt hàng và thanh toán.</li>
-            <li>Chính sách giao hàng.</li>
-            <li>Chính sách đổi trả.</li>
-            <li>Thanh toán</li>
-        </ul>
-    </div>
-
-    <!-- CỘT 3: LIÊN KẾT -->
-    <div class="footer-col">
-        <h3>Liên Kết</h3>
-        <ul>
-            <li>Tìm kiếm</li>
-            <li>Giới thiệu</li>
-            <li>Chính sách đổi trả</li>
-            <li>Chính sách bảo mật</li>
-            <li>Điều khoản dịch vụ</li>
-        </ul>
-    </div>
-
-    <!-- CỘT 4: THEO DÕI + MẠNG XÃ HỘI -->
-    <div class="footer-col">
-        <h3>Theo Dõi Nông Sản Nhóm 11</h3>
-        <div class="social-icons">
-            <a href="#"><img src="images/fb.jpg" alt="Facebook"></a>
-            <a href="#"><img src="images/tw.jpg" alt="Twitter"></a>
-            <a href="#"><img src="images/yt.jpg" alt="YouTube"></a>
-            <a href="#"><img src="images/ig.jpg" alt="Instagram"></a>
-        </div>
-
-        <h3>Hình Thức Thanh Toán</h3>
-        <div class="payment-methods">
-            <img src="images/tienmat.jpg" alt="Tiền Mặt">
-            <img src="images/chuyenkhoan.jpg" alt="Chuyển Khoản">
-            <img src="images/visa.jpg" alt="visa">
-            <img src="images/momo.jpg" alt="Momo">
-        </div>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-      © Bản quyền thuộc về <span>Nhóm 11</span> | Cung cấp bởi <span>TuTu</span>.
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="java.js"></script>
 </body>
 </html>

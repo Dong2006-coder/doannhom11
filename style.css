@@ -111,14 +111,17 @@ body {
 
 /* Giỏ hàng */
 .cart {
-  background-color: #d9a400;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
+    display: flex;                 
+    align-items: center;           
+    justify-content: center;       
+    gap: 8px;                      
+    background: #b58900;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
 }
 .cart img {
   width: 30px;
@@ -371,7 +374,7 @@ body {
 
 /* Nút thêm vào giỏ */
 .them-gio-hang {
-  background: #b38d1b;
+  background: #251d05;
   color: #fff;
   border: none;
   padding: 8px 12px;
@@ -472,14 +475,28 @@ body {
 }
 /*====================KẾT THÚC PHẦN CỦA ĐỒNG==================*/
 /*=========================Bình==============*/
-/* Thanh điều hướng đường dẫn (Breadcrumb) */
-.breadcrumb {
-    padding: 12px 20px;
-    background: #C5AEAE;
-    font-size: 15px;
+* {
+    box-sizing: border-box;
 }
 
-/* Tiêu đề chính */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #fafaf4;
+}
+
+/* ================= BREADCRUMB ================= */
+.breadcrumb {
+    width: 100%;
+    background: #C5AEAE;
+    padding: 12px 20px;
+    font-size: 15px;
+    color: #000;
+    font-weight: normal;
+    overflow-x: hidden;
+}
+
+/* ================= TIÊU ĐỀ GIỎ HÀNG ================= */
 .title {
     text-align: center;
     margin-top: 25px;
@@ -488,35 +505,37 @@ body {
     color: #1f5e24;
 }
 
-/* Phụ đề */
 .subtitle {
     text-align: center;
     color: #444;
     margin-bottom: 30px;
 }
 
+/* ================= GIỎ HÀNG ================= */
 .cart-wrapper {
-    width: 90%;
-    margin: 40px auto;   /* căn giữa 100% */
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
     border: 2px solid #E7BFC7;
-    border-radius: 0;
-    overflow: hidden;
     background: white;
+    overflow-x: auto;
+    border-radius: 6px;
+    padding: 10px;
 }
 
-
-/* Hàng tiêu đề */
+/* Header row */
 .header-row {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 0.6fr;
     background: #FFF5F5;
     border-bottom: 2px solid #E7BFC7;
-    font-weight: bold;
     text-align: center;
+    font-weight: bold;
+    align-items: center;
 }
 
 .header-row div {
-    padding: 16px 10px;
+    padding: 10px 8px;
     border-right: 1px solid #E7BFC7;
     font-size: 15px;
 }
@@ -525,7 +544,7 @@ body {
     border-right: none;
 }
 
-/* Các hàng sản phẩm */
+/* Hàng sản phẩm */
 .row {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 0.6fr;
@@ -539,7 +558,7 @@ body {
 }
 
 .row > div {
-    padding: 18px 10px;
+    padding: 8px;
     border-right: 1px solid #E7BFC7;
 }
 
@@ -549,54 +568,60 @@ body {
 
 /* Ảnh sản phẩm */
 .product-img {
-    width: 80px;
+    width: 70px;
+    height: 70px;
+    max-width: 100%;
+    object-fit: cover;
     display: block;
     margin: auto;
-    border-radius: 0;   /* vuông góc */
     border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-/* Ô nhập số lượng */
+/* Input số lượng */
 .qty {
-    width: 55px;
-    padding: 5px;
-    font-size: 15px;
-    border: 1.5px solid #E7BFC7;
-    border-radius: 0;   /* vuông góc */
+    width: 50px;
+    padding: 4px;
+    font-size: 14px;
+    border: 1px solid #E7BFC7;
     text-align: center;
+    border-radius: 4px;
 }
 
-/* Nút xóa */
+/* Nút xóa sản phẩm */
 .delete-btn {
     border: none;
     background: none;
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
     color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .delete-btn:hover {
     color: red;
 }
 
-
-/* Khu vực chứa toàn bộ nút và tổng tiền */
+/* ================= NÚT HÀNH ĐỘNG ================= */
 .action-area {
     width: 90%;
+    max-width: 1200px;
     margin: 30px auto;
     display: flex;
-    justify-content: space-between; /* tách trái – phải */
+    justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-/* Khối nút bên trái */
 .left-actions {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-/* Khối tổng tiền + thanh toán bên phải */
 .right-actions {
     display: flex;
     flex-direction: column;
@@ -604,9 +629,7 @@ body {
     gap: 15px;
 }
 
-/* Nút hủy & cập nhật giỏ hàng */
-.cancel-btn,
-.update-btn {
+.cancel-btn,.update-btn {
     padding: 14px 35px;
     font-size: 15px;
     border: none;
@@ -616,12 +639,11 @@ body {
     background: black;
 }
 
-/* Ô tổng tiền */
 .summary {
     font-size: 17px;
     font-weight: bold;
     display: flex;
-    align-items: center;
+align-items: center;
 }
 
 .total {
@@ -632,7 +654,6 @@ body {
     text-align: right;
 }
 
-/* Nút thanh toán */
 .checkout-btn {
     padding: 12px 35px;
     background: #57C05E;
@@ -640,277 +661,10 @@ body {
     color: #fff;
     font-weight: bold;
     border-radius: 4px;
-cursor: pointer;
-}
-
-/* ======================= SẢN PHẨM BÁN CHẠY ======================= */
-
-/* Tiêu đề */
-.popular-title {
-    width: 90%;
-    margin: 40px auto 20px;
-    font-size: 26px;
-    color: #57C05E;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.popular-title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 320px;
-    height: 3px;
-    background: #84F2AA;
-    border-radius: 2px;
-}
-
-/* Danh sách sản phẩm */
-.product-list {
-    display: flex;
-    width: 90%;
-    margin: auto;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-/* Card sản phẩm */
-.product-card {
-    width: 23%;
-    padding: 15px;
-    border: 2px solid #E7E7E7;
-    border-radius: 12px;
-    text-align: center;
-    background: #fff;
-    transition: 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 4px 12px #ddd;
-}
-
-.product-card img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.product-card .origin {
-    color: gray !important;
-    font-weight: normal;
-    margin-top: 8px;
-}
-
-.product-card .name {
-    font-size: 17px;
-    color: #333;
-    font-weight: bold;
-    min-height: 48px;
-}
-
-.product-card .price {
-    color: #57C05E;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.product-card .review,
-.product-card .sold {
-    color: #666;
-    font-size: 14px;
-}
-
-.product-card .rating {
-    color: #F9C000;
-    margin-bottom: 10px;
-}
-
-/* Nút thêm giỏ hàng */
-.add-btn {
-    padding: 10px 20px;
-    background: #57C05E;
-    color: white;
-    border: none;
-    border-radius: 6px;
     cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
 }
 
-.add-btn:hover {
-    background: #fff;
-}
-
-.footer-logo {
-  width: 80px;
-}
-
-.footer-about-header h3 {
-  margin: 0;
-}
-
-/* Text trong footer */
-.footer-col p {
-  margin: 5px 0;
-  color: #444;
-}
-
-.footer-col i {
-  color: #4a7c1a;
-  margin-right: 5px;
-}
-
-.footer-col .highlight {
-  color: #2b8f4a;
-  font-weight: bold;
-}
-
-/* Ảnh đã thông báo */
-.notify-img {
-  width: 180px;
-  margin-top: 10px;
-}
-
-/* Danh sách link */
-.footer-col ul {
-    list-style: none;  /* bỏ chấm tròn */
-    margin: 0;
-    padding: 0;
-}
-
-.footer-col ul li {
-  padding: 5px 0;
-  color: #444;
-   white-space: nowrap;
-}
-
-/* Mạng xã hội */
-.social-icons img {
-  width: 36px;
-  height: 36px;
-  margin-bottom: 18px;
-  margin-right: 12px;
-  border-radius: 8px;
-  object-fit: cover;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.social-icons img:hover {
-  transform: scale(1.15);
-}
-
-/* Hình thức thanh toán: CẢ DÃY LOGO */
-.payment-methods {
-  display: flex;
-  align-items: center;
-  gap: 15px;           /* khoảng cách giữa các logo */
-  margin-top: 8px;     /* cách chữ "Hình Thức Thanh Toán" một chút */
-  padding-left: 5px;
-  justify-content: flex-start;
-}
-
-/* Từng logo thanh toán */
-.payment-methods img {
-    height: 46px;          /* nhỏ hơn 50px một chút */
-    width: auto;
-object-fit: contain;
-    background: #ffffff;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-/* COPYRIGHT */
-.footer-bottom {
-  margin-top: 15px;
-  background: #4a7c1a;
-  color: white;
-  text-align: center;
-  padding: 12px;
-  font-size: 15px;
-}
-
-.footer-bottom span {
-  font-weight: bold;
-}
-/* ==== BREADCRUMB CHUẨN – KHÔNG GẠCH XANH ===== */
-.breadcrumb {
-    width: 100%;
-    background: #C5AEAE;   /* màu nền bạn đang dùng */
-    padding: 12px 20px;
-    font-size: 15px;
-
-    /* Ngăn pseudo-element cũ tạo đường xanh */
-    position: relative;
-}
-
-.breadcrumb::after {
-    display: none !important;   /* xóa hoàn toàn dòng xanh */
-}
-
-/* Nội dung breadcrumb */
-.breadcrumb-content {
-    font-size: 16px;
-    color: #000;
-}
-
-/* Link Trang Chủ */
-.breadcrumb-content .home-link {
-    text-decoration: none;
-    font-weight: bold;
-    color: #000;
-}
-
-.breadcrumb-content .home-link:hover {
-    color: #2a6fdb; /* hover xanh nhạt */
-}
-/* ======================= BREADCRUMB ======================= */
-.breadcrumb {
-    background: #C5AEAE;
-    padding: 12px 20px;
-    font-size: 15px;
-}
-
-/* ======================= TIÊU ĐỀ CHÍNH ======================= */
-.main-title {
-    text-align: center;
-    color: #43A047;
-    margin-top: 25px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-/* ======================= KHU VỰC 2 CỘT ======================= */
-.content-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    margin-top: 30px;
-    padding-left: 30px;
-}
-
-/* Cột trái */
-.sidebar {
-    font-size: 20px;
-    font-weight: 600;
-    width: 200px;
-    line-height: 32px;
-}
-
-/* Cột phải */
-.image-container img {
-    width: 900px;
-    max-width: 100%;
-    border: 1px solid #ccc;
-}
-
-/* ======================= SẢN PHẨM BÁN CHẠY ======================= */
-
-/* Tiêu đề */
+/* ================= SẢN PHẨM BÁN CHẠY ================= */
 .popular-title {
     width: 90%;
     margin: 40px auto 20px;
@@ -932,18 +686,18 @@ object-fit: contain;
     border-radius: 2px;
 }
 
-/* Danh sách sản phẩm */
 .product-list {
     display: flex;
+    flex-wrap: wrap;
     width: 90%;
     margin: auto;
     gap: 20px;
     justify-content: space-between;
 }
 
-/* Card sản phẩm */
 .product-card {
     width: 23%;
+    min-width: 20px;
     padding: 15px;
     border: 2px solid #E7E7E7;
     border-radius: 12px;
@@ -964,7 +718,6 @@ object-fit: contain;
     border-radius: 10px;
 }
 
-/* Text */
 .product-card .origin {
     color: gray;
     font-weight: normal;
@@ -995,7 +748,7 @@ object-fit: contain;
     margin-bottom: 10px;
 }
 
-/* ======================= NÚT THÊM GIỎ HÀNG ======================= */
+/* Nút thêm vào giỏ hàng */
 .add-btn {
     padding: 10px 20px;
     background: #57C05E;
@@ -1008,9 +761,45 @@ object-fit: contain;
 }
 
 .add-btn:hover {
-    background: #47A050;
-    color: white;
+    background: #45a049;
 }
+
+/* Giá và tổng tiền */
+.price-js,
+.total-js {
+    font-weight: bold;
+}
+/* ================== THÔNG BÁO CẬP NHẬT ================== */
+.toast-message {
+    position: fixed;
+    top: 20px;
+    right: -350px; /* Ẩn ngoài màn hình */
+    background: #4CAF50;
+    color: white;
+    padding: 15px 22px;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 2000;
+
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.6s ease;
+}
+
+.toast-message i {
+    font-size: 20px;
+}
+
+.toast-message.show {
+    right: 20px;
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /*===========KẾT THÚC CỦA BINH=================*/
 /*===========BẮT ĐẦU CỦA HẬU=================*/
 /* Tổng nền trang */
@@ -1124,6 +913,200 @@ body {
 .order-btn:hover {
     opacity: 0.9;
 }
+/* Breadcrumb */
+.ns-tranhau .breadcrumb {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Khu vực tin */
+.ns-tranhau .news-section {
+    width: 100%;
+}
+
+/* Mỗi mục tin */
+.ns-tranhau .news-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+/* Ảnh */
+.ns-tranhau .news-item img {
+    width: 130px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Text */
+.ns-tranhau .news-item .text {
+    flex: 1;
+}
+
+/* Tiêu đề */
+.ns-tranhau .news-item h2 {
+    color: #2c6f23;     /* màu xanh */
+    font-size: 22px;
+    font-weight: 700;   /* Đậm hơn */
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+
+/* Nội dung đoạn văn */
+.ns-tranhau .news-item p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Gạch phân cách */
+.ns-tranhau hr {
+    border: none;
+    border-top: 1px solid #050505;
+    width: 70%;          /* chỉnh short */
+    margin: 20px auto;   /* căn giữa */
+}
+/*===========KẾT THÚC CỦA HẬU=================*/
+/*==================BẮT ĐÀU CỦA HIỆP=================*/
+/* Thiết lập cơ bản */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Màu nền nhẹ */
+    color: #333;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tiêu đề */
+.section-header h1 {
+    background-color: #C5AEAE; /*  màu nền nâu */
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    text-align: left; 
+    margin-bottom: 20px;
+    font-size: 1.9em;
+    border-radius: 5px;
+}
+
+
+/* Tiêu đề các phần */
+.section-heading h2 {
+    color: #1f7904; /* Màu xanh ngọc đậm */
+    font-size: 1.7em;
+    padding-bottom: 10px;
+    padding-left:20px;
+    text-align: left;
+    border-bottom: 2px solid #056722;
+    margin-bottom: 10px;
+}
+
+/* Container cho nội dung 2 cột */
+.gioi-thieu-tong-quan-content,
+.ve-chung-toi-content,
+.quy-trinh-content {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: flex-start; /* Căn trên cùng */
+}
+
+.text-content {
+    flex: 2; /* Chiếm 2/3 không gian */
+    padding-left:60px;
+    padding-right:25px;
+    font-size: 1.5em;
+}
+
+.image-content {
+    flex: 1; /* Chiếm 1/3 không gian */
+    text-align: center;
+}
+
+/* Định kiểu cho danh sách (ul/li) */
+ul {
+    padding-left: 20px;
+    list-style-type: none; /* Bỏ dấu chấm mặc định */
+}
+
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Dấu gạch ngang phân cách */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(76, 175, 80, 0.75), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+/* Phần logistic */
+.section-logistic {
+    margin-top: 40px;
+    text-align: center; /* Căn giữa sơ đồ */
+}
+
+/* Responsive - Đưa nội dung về 1 cột trên màn hình nhỏ */
+@media (max-width: 768px) {
+    .ve-chung-toi-content,
+    .quy-trinh-content {
+        flex-direction: column;
+    }
+    .image-content {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+}
+        .section-footer-images {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+            padding: 40px 0;
+        }
+
+        .section-footer-images .image-left img {
+            width: 700px;
+            height: auto;
+            border-radius: 30px;
+            object-fit: cover;
+        }
+
+        .section-footer-images .image-right img {
+            width: 700px;
+            height: auto;
+            border-radius: 30px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .section-footer-images {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .section-footer-images .image-left img,
+            .section-footer-images .image-right img {
+                width: 100%;
+                max-width: 100%;
+                }
+        }
 
 /* ========== FOOTER ========== */
 .footer {

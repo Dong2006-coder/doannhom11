@@ -1,235 +1,192 @@
-import React, { useState } from 'react';
-import { ShoppingCart, Phone, MapPin, Clock, Search } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ĐỒ ÁN NHÓM 11 ĐHV</title>
 
-export default function NongSanWebsite() {
-  const [cartCount] = useState(0);
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
 
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header Top */}
-      <div className="bg-green-700 text-white py-2 px-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4" />
-              <span>Hotline: 091.886.5767</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
-              <span>Địa chỉ: Xóm Phú Thành Xã Lam Thành Nghệ An</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <button className="px-3 py-1 bg-blue-500 rounded text-xs">Đăng Nhập / Đăng Ký</button>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Header */}
-      <div className="bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center gap-3">
-              <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-xs text-center">LOGO</span>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-green-800">NÔNG SẢN NHÓM 11</h1>
-                <p className="text-sm text-gray-600">Bringing nature to your home</p>
-              </div>
-            </div>
-
-            {/* Delivery Info */}
-            <div className="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded">
-              <div className="w-12 h-12 bg-gray-200 rounded"></div>
-              <div>
-                <p className="text-sm font-semibold">Giao Hàng Nhanh 2h</p>
-                <p className="text-xs text-gray-600">Bán Kính 10km</p>
-              </div>
-            </div>
-
-            {/* Support Info */}
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-yellow-100 rounded-full"></div>
-              <div>
-                <p className="text-sm font-semibold">Hỗ Trợ 24/7</p>
-                <p className="text-xs text-gray-600">Hotline: 091.886.5767</p>
-              </div>
-            </div>
-
-            {/* Working Hours */}
-            <div className="flex items-center gap-2">
-              <Clock className="w-10 h-10 text-red-500" />
-              <div>
-                <p className="text-sm font-semibold">Giờ Làm Việc</p>
-                <p className="text-xs text-gray-600">T2 - T7 Từ 6h Đến 24h</p>
-              </div>
-            </div>
-
-            {/* Cart */}
-            <div className="relative">
-              <button className="bg-yellow-500 text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-yellow-600">
-                <ShoppingCart className="w-5 h-5" />
-                <span className="font-semibold">Giỏ Hàng({cartCount})</span>
-              </button>
-            </div>
-          </div>
-
-          {/* Search Bar */}
-          <div className="mt-4">
-            <div className="flex gap-2">
-              <input
-                type="text"
-                placeholder="Tìm kiếm..."
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500"
-              />
-              <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">
-                <Search className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation Menu */}
-      <nav className="bg-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <ul className="flex gap-8 py-3">
-            <li><a href="#" className="hover:text-yellow-300 font-medium">Trang Chủ</a></li>
-            <li><a href="#" className="hover:text-yellow-300 font-medium">Giới Thiệu</a></li>
-            <li><a href="#" className="hover:text-yellow-300 font-medium">Sản Phẩm</a></li>
-            <li><a href="#" className="hover:text-yellow-300 font-medium">Liên Hệ</a></li>
-            <li><a href="#" className="hover:text-yellow-300 font-medium">Mùa Vụ Hoa Quả</a></li>
-            <li><a href="#" className="hover:text-yellow-300 font-medium">Tin Tức</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      {/* Breadcrumb */}
-      <div className="bg-pink-100 py-3 px-4">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-gray-700">Trang Chủ // <span className="font-semibold">Tin Nông Sản</span></p>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        {/* Service Section 1 */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6 flex items-start gap-6">
-          <div className="w-32 h-32 bg-gray-200 rounded flex-shrink-0"></div>
-          <div>
-            <h2 className="text-2xl font-bold text-green-700 mb-3">
-              GIAO HÀNG NÔNG SẢN TƯƠI 24/7 – LUÔN SẴN SÀNG PHỤC VỤ
-            </h2>
-            <p className="text-gray-700 leading-relaxed">
-              Shop Nông Sản 24 Giờ chính thức triển khai dịch vụ giao hàng nhanh 24/7, đảm bảo khách hàng luôn nhận được nông sản tươi – sạch – an toàn mọi lúc mọi nơi.
-            </p>
-          </div>
-        </div>
-
-        {/* Service Section 2 */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6 flex items-start gap-6">
-          <div className="w-32 h-32 bg-gray-200 rounded flex-shrink-0"></div>
-          <div>
-            <h2 className="text-2xl font-bold text-green-700 mb-3">
-              Nông Sản Sạch Tăng Sản Lượng, Đảm Bảo Cung Ứng Ổn Định
-            </h2>
-            <p className="text-gray-700 leading-relaxed">
-              Theo thống tin từ hệ thống phân phối, lượng rau củ và trái cây sạch trong tuần qua tăng mạnh nhằm đáp ứng nhu cầu tiêu dùng của người dân. Các mặt hàng như rau Đà Lạt, trái cây miền Tây, gạo hữu cơ, hạt dinh dưỡng được bổ sung liên tục, đảm bảo chất lượng và nguồn gốc rõ ràng.
-            </p>
-          </div>
-        </div>
-
-        {/* Service Section 3 */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6 flex items-start gap-6">
-          <div className="w-32 h-32 bg-red-600 rounded flex-shrink-0 flex items-center justify-center text-white font-bold">
-            PHÁP LUẬT
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-green-700 mb-3">
-              Quy Định Về Giao Hàng & Bảo Quản Nông Sản Tươi
-            </h2>
-            <p className="text-gray-700 mb-3">Theo quy chuẩn mới, các cửa hàng kinh doanh nông sản tươi sống phải:</p>
-            <ul className="list-disc list-inside text-gray-700 space-y-1 mb-3">
-              <li>Bảo quản rau củ ở nhiệt độ 5–10°C</li>
-              <li>Không được để thực phẩm chung với hàng hóa gây ô nhiễm</li>
-              <li>Phải có giấy chứng nhận về sinh an toàn thực phẩm</li>
-            </ul>
-            <p className="text-gray-700">
-              Các đơn vị vận chuyển cũng phải đảm bảo điều kiện vệ sinh, tránh để nông sản bị hỏng, cấp nát trong quá trình giao hàng.
-            </p>
-          </div>
-        </div>
-
-        {/* Service Section 4 */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6 flex items-start gap-6">
-          <div className="w-32 h-32 bg-gray-200 rounded flex-shrink-0"></div>
-          <div>
-            <h2 className="text-2xl font-bold text-green-700 mb-3">
-              Kết nối nông dân và người tiêu dùng – góp phần nâng cao dân trí về nông sản sạch
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-3">
-              Một trong những mục tiêu lớn của Shop Nông Sản là giúp người tiêu dùng hiểu đúng về an toàn thực phẩm, nhận diện nông sản sạch và chọn đúng sản phẩm chất lượng.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Song song đó, đơn vị cũng hỗ trợ nông dân tiếp cận thị trường, hạn chế tình trạng bị ép giá, giúp nâng cao giá trị nông sản Việt.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-10">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Company Info */}
-            <div>
-              <h3 className="text-green-400 font-bold mb-4">Giới thiệu</h3>
-              <p className="text-sm mb-2"><strong>Công Ty CP Đầu Tư Và Phát Triển Nông Trại Hữu Cơ</strong></p>
-              <p className="text-sm mb-2">Giá siêu tốt - Giao siêu tốc</p>
-              <p className="text-sm">📍 Xóm Phú Thành, Xã Lam Thành, Nghệ An</p>
-              <p className="text-sm">📞 091.886.5767</p>
-              <p className="text-sm">✉️ Nhom112006@gmail.com</p>
-            </div>
-
-            {/* Customer Support */}
-            <div>
-              <h3 className="text-green-400 font-bold mb-4">Hỗ Trợ Khách Hàng</h3>
-              <ul className="text-sm space-y-2">
-                <li><a href="#" className="hover:text-green-400">• Câu hỏi thường gặp</a></li>
-                <li><a href="#" className="hover:text-green-400">• Hướng dẫn đặt hàng</a></li>
-                <li><a href="#" className="hover:text-green-400">• Chính sách giao hàng</a></li>
-                <li><a href="#" className="hover:text-green-400">• Chính sách đổi trả</a></li>
-              </ul>
-            </div>
-
-            {/* Links */}
-            <div>
-              <h3 className="text-green-400 font-bold mb-4">Liên Kết</h3>
-              <ul className="text-sm space-y-2">
-                <li><a href="#" className="hover:text-green-400">• Tìm kiếm</a></li>
-                <li><a href="#" className="hover:text-green-400">• Giới thiệu</a></li>
-                <li><a href="#" className="hover:text-green-400">• Chính sách bảo mật</a></li>
-                <li><a href="#" className="hover:text-green-400">• Điều khoản dịch vụ</a></li>
-              </ul>
-            </div>
-
-            {/* Social */}
-            <div>
-              <h3 className="text-green-400 font-bold mb-4">Theo Dõi Chúng Tôi</h3>
-              <div className="flex gap-3">
-                <a href="#" className="w-10 h-10 bg-blue-600 rounded flex items-center justify-center hover:bg-blue-700">f</a>
-                <a href="#" className="w-10 h-10 bg-blue-400 rounded flex items-center justify-center hover:bg-blue-500">t</a>
-                <a href="#" className="w-10 h-10 bg-red-600 rounded flex items-center justify-center hover:bg-red-700">▶</a>
-                <a href="#" className="w-10 h-10 bg-pink-600 rounded flex items-center justify-center hover:bg-pink-700">📷</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
-            <p>© Bản quyền thuộc về Nhóm 11 | Cung cấp bởi TuTu.</p>
-          </div>
-        </div>
-      </footer>
+  <!-- ========== TOPBAR ========== -->
+  <div class="tieu-de">
+    <div class="topbar-left">
+      <span><i class="fa fa-phone"></i> Hotline: <strong>091.885.5767</strong></span>
     </div>
+
+    <div class="tieu-de-con">
+      <span><i class="fa fa-map-marker-alt"></i> Địa chỉ: Xóm Phú Thành, Xã Lam Thành, Nghệ An</span>
+    </div>
+
+    <div class="tieu-de-phu">
+      <div class="flags">
+        <img src="images/laco.png" alt="UN">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/20px-Flag_of_Vietnam.svg.png" alt="VN">
+      </div>
+      <span><i class="fa fa-user"></i> <a href="#">Đăng Nhập</a> / <a href="#">Đăng Ký</a></span>
+    </div>
+  </div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <div class="slogan">
+        <h2>NÔNG SẢN NHÓM 11</h2>
+        <p>Bring nature to your home</p>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <img src="images/oto.png" alt="Giao hàng nhanh">
+      <div>
+        <strong>Giao Hàng Nhanh 2h</strong><br>
+        <span>Bán kính 10Km</span>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <img src="images/mail.png" alt="Hỗ trợ 24/7">
+      <div>
+        <strong>Hỗ Trợ 24/7</strong><br>
+        <span>Hotline: 091.886.5767</span>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <img src="images/dongho.png" alt="Giờ làm việc">
+      <div>
+        <strong>Giờ Làm Việc</strong><br>
+        <span>T2 - T7 Từ 6h Đến 24h</span>
+      </div>
+    </div>
+   <a href="giohang.html" class="btn-cart">
+  <i class="fa-solid fa-cart-shopping"></i>
+  Giỏ hàng(<span id="cart-count">0</span>)
+</a>
+  </header>
+
+  <!-- Search -->
+  <div class="search-bar">
+    <input type="text" placeholder="Tìm Kiếm...">
+    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Trang Chủ</a></li>
+      <li><a href="gioithieu.html">Giới Thiệu</a></li>
+      <li><a href="sanpham.html">Sản Phẩm</a></li>
+      <li><a href="lienhe.html">Liên Hệ</a></li>
+      <li><a href="muavu.html">Mùa Vụ Hoa Quả</a></li>
+      <li><a href="tintuc.html">Tin Tức</a></li>
+    </ul>
+  </nav>
+
+    <div class="banner-image">
+      <img src="images/khunganh.png" alt="rau củ quả" />
+    </div>
+  </div>
+  <!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Nông Sản</title>
+    <link rel="style" href="Style.css">
+</head>
+<body>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#">Trang Chủ</a> / / <span>Tin Nông Sản</span>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        
+        <!-- Article 1 -->
+        <article class="news-article">
+            <div class="article-logo">
+                <img src="images/24gio-logo.png" alt="24 Giờ Logo">
+            </div>
+            <div class="article-content">
+                <h2>GIAO HÀNG NÔNG SẢN TƯƠI 24/7 – LUÔN SẴN SÀNG PHỤC VỤ</h2>
+                <p>
+                    Shop Nông Sản 24 Giờ chính thức triển khai dịch vụ giao hàng nhanh 24/7, đảm bảo khách 
+                    hàng luôn nhận được nông sản tươi – sạch – an toàn mọi lúc mọi nơi.
+                </p>
+            </div>
+        </article>
+
+        <hr class="divider">
+
+        <!-- Article 2 -->
+        <article class="news-article">
+            <div class="article-logo">
+                <img src="images/vietbao-logo.png" alt="VietBao Logo">
+            </div>
+            <div class="article-content">
+                <h2>Nông Sản Sạch Tăng Sản Lượng, Đảm Bảo Cung Ứng Ổn Định</h2>
+                <p>
+                    Theo thông tin từ hệ thống phân phối, lượng rau củ và trái cây sạch trong tuần qua tăng 
+                    mạnh nhằm đáp ứng nhu cầu tiêu dùng của người dân. Các mặt hàng như rau Đà Lạt, trái 
+                    cây miền Tây, gạo hữu cơ, hạt dinh dưỡng được bổ sung liên tục, đảm bảo chất lượng và 
+                    nguồn gốc rõ ràng.
+                </p>
+            </div>
+        </article>
+
+        <hr class="divider">
+
+        <!-- Article 3 -->
+        <article class="news-article">
+            <div class="article-logo">
+                <img src="images/phapluat-logo.png" alt="Pháp Luật Logo">
+            </div>
+            <div class="article-content">
+                <h2>Quy Định Về Giao Hàng & Bảo Quản Nông Sản Tươi</h2>
+                <p>Theo quy chuẩn mới, các cửa hàng kinh doanh nông sản tươi sống phải:</p>
+                <ul>
+                    <li>Bảo quản rau củ ở nhiệt độ 5–10°C</li>
+                    <li>Không được để thực phẩm chung với hàng hóa gây ô nhiễm</li>
+                    <li>Phải có giấy chứng nhận về sinh an toàn thực phẩm</li>
+                </ul>
+                <p>
+                    Các đơn vị vận chuyển cũng phải đảm bảo điều kiện vệ sinh, tránh để nông sản bị hỏng,dập nát trong quá trình giao hàng.
+</p>
+            </div>
+        </article>
+
+        <hr class="divider">
+
+        <!-- Article 4 -->
+        <article class="news-article">
+            <div class="article-logo">
+                <img src="images/dantri-logo.png" alt="Dân Trí Logo">
+            </div>
+            <div class="article-content">
+                <h2>Kết nối nông dân và người tiêu dùng – góp phần nâng cao dân trí về nông sản sạch</h2>
+                <p>
+                    Một trong những mục tiêu lớn của Shop Nông Sản là giúp người tiêu dùng hiểu đúng về 
+                    an toàn thực phẩm, nhận diện nông sản sạch và chọn đúng sản phẩm chất lượng.
+                </p>
+                <p>
+                    Song song đó, đơn vị cũng hỗ trợ nông dân tiếp cận thị trường, hạn chế tình trạng bị ép 
+                    giá, giúp nâng cao giá trị nông sản Việt.
+                </p>
+                <p>
+                    Thông tin minh bạch – hiểu biết đúng – tiêu dùng thông minh là xu hướng được đánh giá 
+                    sẽ phát triển mạnh trong thời gian tới.
+                </p>
+            </div>
+        </article>
+
+    </div>
+</body>
+</html>
