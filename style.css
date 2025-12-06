@@ -293,10 +293,14 @@ body {
 
 /* ======================= 8. (GRID) ======================= */
 /* ========== DANH SÁCH SẢN PHẨM ========== */
-.product-list {
-  display: flex;
-  gap: flex;
+.product-list-one {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* tự co để đủ chỗ */
+  gap: 20px;
   margin-top: 18px;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ========== THẺ SẢN PHẨM ========== */
@@ -311,6 +315,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.sp-card {
+    flex: 0 0 200px;      /* mỗi thẻ rộng đúng 200px */
+    margin: 0;
 }
 
 .sp-card:hover {
