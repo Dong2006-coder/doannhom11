@@ -46,7 +46,7 @@
 
   /* Banner */
   .banner-image img {
-    height: 250px;
+    height: auto;
     object-fit: cover;
   }
 
