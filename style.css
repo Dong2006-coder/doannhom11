@@ -9,8 +9,6 @@ body {
   font-family: "Arial", sans-serif;
   background-color: #fafaf4;
 }
-
-
 /* ======================= . TOPBAR (THANH XANH LÁ TRÊN CÙNG) ======================= */
 .tieu-de {
   background-color: #6a8c2d;
@@ -132,7 +130,6 @@ body {
     margin: 0;
     padding: 0;
 }
-/*=========================KẾT THÚC CODE CHUNG==========================*/
 /* ======================= . THANH TÌM KIẾM ======================= */
 .search-bar {
   display: flex;
@@ -202,7 +199,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
-/*========================KẾT THÚC====================*/
+/*========================KẾT THÚC code chung====================*/
 /* ======================= PHẦN CỦA ĐỒNG. KHỐI DANH MỤC (CATEGORY BOX) ======================= */
 /* =======================  NAVBAR (THANH MENU CHÍNH) ======================= */
 .navbar {
@@ -236,7 +233,7 @@ body {
 
 /* Hover */
 .navbar ul li:hover {
-    background-color: #6a8c2d;   /* màu giống ảnh bạn gửi */
+    background-color: #6a8c2d;   
 }
 
 
@@ -304,43 +301,55 @@ body {
 }
 
 /* ========== THẺ SẢN PHẨM ========== */
+/* ================= THẺ SẢN PHẨM ================= */
+
 .sp-card {
-  background: none;
+  background: #fff;
   border-radius: 12px;
   padding: 15px;
   text-align: center;
   position: relative;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   transition: transform 0.2s;
+
+  /* QUAN TRỌNG: Cho các card cao bằng nhau */
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.sp-card {
-    flex: 0 0 200px;      /* mỗi thẻ rộng đúng 200px */
-    margin: 0;
 }
 
 .sp-card:hover {
   transform: translateY(-4px);
 }
 
-/* Khung chứa ảnh */
-.sp-card .product-img-box {
-  position: relative;
+/* ================= KHUNG ẢNH ĐỒNG ĐỀU ================= */
+.product-img-box-one {
   width: 100%;
+  height: 200px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-/* Ảnh sản phẩm */
-.sp-card img {
-  width: 160px;
-  height: 160px;
+/* ẢNH SẢN PHẨM — không bị méo */
+.product-img-box-one img {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
 }
+/* Nút thêm vào giỏ */
+.them-gio-hang {
+  background: #aa8412;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: auto;
+}
+/* ================= FLASH SALE + SALE ================= */
 
-/* Nhãn giảm giá */
 .sp-card .discount {
   position: absolute;
   top: 10px;
@@ -354,7 +363,6 @@ body {
   z-index: 20;
 }
 
-/* Huy hiệu FLASH SALE */
 .sp-card .flash-sale-badge {
   position: absolute;
   top: 0;
@@ -362,9 +370,7 @@ body {
   width: 60px;
   height: auto;
   z-index: 20;
-  pointer-events: none;
 }
-
 /* Thông tin chữ trong card */
 .origin {
   color: #777;
@@ -395,16 +401,6 @@ body {
   margin: 4px 0;
 }
 
-/* Nút thêm vào giỏ */
-.them-gio-hang {
-  background: #aa8412;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
 /* ===== KHUNG TIÊU ĐỀ CÓ ĐƯỜNG KẺ 2 BÊN ===== */
 .section-title {
     width: 100%;
@@ -522,16 +518,6 @@ body {
 
 /*====================KẾT THÚC PHẦN CỦA ĐỒNG==================*/
 /*=========================Bình==============*/
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #fafaf4;
-}
-
 /* ================= BREADCRUMB ================= */
 .breadcrumb {
     width: 100%;
@@ -565,7 +551,7 @@ body {
     margin: 40px auto;
     border: 2px solid #E7BFC7;
     background: white;
-    overflow-x: auto;
+    overflow-x: hidden;
     border-radius: 6px;
     padding: 10px;
 }
@@ -685,11 +671,17 @@ body {
     cursor: pointer;
     background: black;
 }
+.update-btn:hover {
+   background:#56742a;
+}
+.cancel-btn:hover {
+    background: #56742a;
+}
 
 .summary {
     font-size: 17px;
     font-weight: bold;
-    display: flex;
+display: flex;
 align-items: center;
 }
 
@@ -710,112 +702,156 @@ align-items: center;
     border-radius: 4px;
     cursor: pointer;
 }
+.btn-thanh-toan {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+} 
 
-/* ================= SẢN PHẨM BÁN CHẠY ================= */
+/* ======================= SẢN PHẨM BÁN CHẠY ======================= */
 .popular-title {
     width: 90%;
+    max-width: 1200px;
     margin: 40px auto 20px;
-    font-size: 26px;
+    font-size: 28px;
     color: #57C05E;
     font-weight: bold;
-    position: relative;
-    padding-bottom: 10px;
+    text-align: left;
 }
 
 .popular-title::after {
     content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 320px;
-    height: 3px;
-    background: #84F2AA;
+    display: block;
+    width: 600px;
+    height: 2px;
+    background-color: #57C05E;
+    margin: 10px 0 0;
     border-radius: 2px;
 }
 
+/* --- DANH SÁCH SẢN PHẨM BÁN CHẠY - ĐÃ TỐI ƯU HOÀN TOÀN --- */
 .product-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;           /* Không xuống dòng */
+    gap: 20px;                   /* Giảm gap một chút cho mobile đẹp hơn */
     width: 90%;
-    margin: auto;
-    gap: 20px;
-    justify-content: space-between;
+    margin: 0 auto 50px;
+    padding: 10px 0 20px;        /* Thêm padding trên/dưới */
+    overflow-x: auto;
+    
+    /* Ẩn scrollbar nhưng vẫn vuốt được (đẹp trên mọi thiết bị) */
+    -ms-overflow-style: none;    /* IE và Edge */
+    scrollbar-width: none;       /* Firefox */
+}
+.product-list::-webkit-scrollbar {
+    display: none;               /* Chrome, Safari, Opera */
 }
 
+/* Đảm bảo 6 sản phẩm vẫn đẹp trên mọi màn hình */
 .product-card {
-    width: 23%;
-    min-width: 20px;
-    padding: 15px;
-    border: 2px solid #E7E7E7;
-    border-radius: 12px;
-    text-align: center;
-    background: #fff;
-    transition: 0.3s;
+    flex: 0 0 220px;     /* cố định chiều rộng */
+    width: 220px;
+    min-width: 220px;
 }
 
+/* Trên màn hình lớn (laptop/PC) hiển thị được 5-6 sản phẩm mà không cần cuộn nhiều */
+@media (min-width: 1200px) {
+    .product-list {
+        justify-content: flex-start; /* sát trái */
+        gap: 25px;
+    }
+    .product-card {
+        flex: 0 0 210px;
+        width: 210px;
+    }
+}
+
+.product-list {
+    scroll-snap-type: x mandatory;   /* Kích hoạt snap */
+}
+
+/* Hover effect */
 .product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 4px 12px #ddd;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-.product-card img {
+/* Responsive gap cho mobile */
+@media (max-width: 768px) {
+    .product-list {
+        gap: 15px;
+        width: 95%;
+    }
+    .product-card {
+        min-width: 200px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        min-width: 180px;
+        width: 180px;
+    }
+}
+.sp-card {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-img-box {
     width: 100%;
-    height: 190px;
-    object-fit: cover;
+    height: 180px;
+    overflow: hidden;
     border-radius: 10px;
-}
-
-.product-card .origin {
-    color: gray;
-    font-weight: normal;
-    margin-top: 8px;
-}
-
-.product-card .name {
-    font-size: 17px;
-    color: #333;
-    font-weight: bold;
-    min-height: 48px;
-}
-
-.product-card .price {
-    color: #57C05E;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.product-card .review,
-.product-card .sold {
-    color: #666;
-    font-size: 14px;
-}
-
-.product-card .rating {
-    color: #F9C000;
     margin-bottom: 10px;
 }
 
-/* Nút thêm vào giỏ hàng */
-.add-btn {
-    padding: 10px 20px;
-    background: #57C05E;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
+.product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
 }
 
-.add-btn:hover {
-    background: #45a049;
+.product-img-box img:hover {
+    transform: scale(1.05);
 }
 
-/* Giá và tổng tiền */
-.price-js,
-.total-js {
-    font-weight: bold;
+.origin {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
 }
+
+.name {
+font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.price {
+    font-size: 15px;
+    color: #E53935;
+    margin-bottom: 5px;
+}
+
+.price s {
+    font-size: 13px;
+    color: #aaa;
+    margin-left: 5px;
+}
+
+.review, .sold, .rating {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+
 /* ================== THÔNG BÁO CẬP NHẬT ================== */
 .toast-message {
     position: fixed;
@@ -846,7 +882,44 @@ align-items: center;
     opacity: 1;
     transform: translateX(0);
 }
+/* ====================== trang mùa vụ ======================= */
+/* ======================= BREADCRUMB ======================= */
+.breadcrumb {
+    background: #C5AEAE;
+    padding: 12px 20px;
+    font-size: 15px;
+}
 
+/* ======================= TIÊU ĐỀ CHÍNH ======================= */
+.main-title {
+    text-align: center;
+    color: #43A047;
+    margin-top: 25px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ======================= KHU VỰC 2 CỘT ======================= */
+.content-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+    padding-left: 30px;
+}
+
+/* Cột trái */
+.sidebar {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+/* Cột phải */
+.image-container img {
+    width: 900px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+}
 /*===========KẾT THÚC CỦA BINH=================*/
 /*===========BẮT ĐẦU CỦA HẬU=================*/
 /* Tổng nền trang */
