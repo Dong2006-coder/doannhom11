@@ -197,6 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (e.target.value < 1) e.target.value = 1;
                 updateTotal();
             }
-        });
+});
     }
 });
